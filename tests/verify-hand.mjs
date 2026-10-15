@@ -23,8 +23,9 @@ class Element{
 }
 const elements=new Map([...html.matchAll(/id="([^"]+)"/g)].map(m=>[m[1],new Element(m[1])]));
 for(const [id,value]of Object.entries({scenario:'bursts',family:'asymmetric',activation:'1',release:'2',n:'3',time:'0',comparison:'db5'}))elements.get(id).value=value;
+const guides=Object.keys(HAND_EXAMPLES).map(key=>{const e=new Element('guide-'+key);e.dataset.guide=key;return e;});
 const buttons=Object.keys(HAND_EXAMPLES).map(key=>{const e=new Element('moment-'+key);e.dataset.handExample=key;return e;});
-globalThis.document={querySelector:selector=>elements.get(selector.slice(1))||null,querySelectorAll:selector=>selector==='[data-hand-example]'?buttons:[],addEventListener(){},hidden:false};
+globalThis.document={querySelector:selector=>elements.get(selector.slice(1))||null,querySelectorAll:selector=>selector==='[data-hand-example]'?buttons:selector==='[data-guide]'?guides:[],addEventListener(){},hidden:false};
 let frame;
 globalThis.requestAnimationFrame=fn=>{frame=fn;return 1;};globalThis.cancelAnimationFrame=()=>{frame=null;};
 await import('../emg/lab.mjs');
@@ -33,4 +34,17 @@ for(const button of buttons){await button.click();const p=HAND_EXAMPLES[button.d
 elements.get('time').handlers.input({target:{value:'0'}});assert.equal(elements.get('hand-scene').dataset.poseKey,'0,0,0');
 await elements.get('play').click();assert.equal(elements.get('play').textContent,'Pause');frame(1000);frame(1100);assert.equal(elements.get('hand-time').textContent,'100 ms');
 await elements.get('restart').click();assert.equal(elements.get('hand-time').textContent,'0 ms');assert.equal(elements.get('play').textContent,'Play replay');
-console.log('PASS: hand poses, exact failure-case timestamps, example controls, time scrubber, playback, and restart wiring.');
+// Guided navigation loads real filter parameters, stays within bounds, and exits on manual edits.
+for(const button of guides){
+ await button.click();assert.equal(elements.get('guide-panel').hidden,false);assert.equal(elements.get('guide-counter').textContent,'Step 1 of 4 · Synthetic example');assert.equal(elements.get('guide-prev').disabled,true);
+ await elements.get('guide-prev').click();assert.ok(elements.get('guide-counter').textContent.startsWith('Step 1'));
+ for(let j=1;j<4;j++)await elements.get('guide-next').click();
+ assert.equal(elements.get('guide-counter').textContent,'Step 4 of 4 · Synthetic example');assert.equal(elements.get('guide-next').disabled,true);assert.equal(elements.get('guide-lesson').hidden,false);assert.ok(elements.get('guide-lesson').textContent.startsWith('Takeaway:'));
+ await elements.get('guide-next').click();assert.ok(elements.get('guide-counter').textContent.startsWith('Step 4'));
+ await elements.get('guide-step-1').click();assert.ok(elements.get('guide-counter').textContent.startsWith('Step 2'));assert.equal(elements.get('guide-lesson').hidden,true);
+ await elements.get('guide-close').click();assert.equal(elements.get('guide-panel').hidden,true);assert.equal(elements.get('metrics').dataset.focus,'');
+}
+await guides[0].click();elements.get('lab-controls').handlers.input({});assert.equal(elements.get('guide-panel').hidden,true);
+await guides[1].click();elements.get('time').handlers.input({target:{value:'0'}});assert.equal(elements.get('guide-panel').hidden,true);
+await guides[2].click();await buttons[0].click();assert.equal(elements.get('guide-panel').hidden,true);
+console.log('PASS: hand poses, playback, walkthrough navigation, step boundaries, metric focus and exit-on-edit wiring.');

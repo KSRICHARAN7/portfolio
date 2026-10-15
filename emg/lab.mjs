@@ -1,7 +1,8 @@
 import {HOP,replay,makeScenario,metrics} from './engine.mjs';
 import {HAND_EXAMPLES,renderHandScene,momentDescription} from './hand.mjs';
+import {getGuide} from './guides.mjs';
 const $=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const form=$('#lab-controls');let scenario,filtered,rawMetrics,filteredMetrics,playing=false,frame,last=0,time=0;
+const form=$('#lab-controls');let scenario,filtered,rawMetrics,filteredMetrics,playing=false,frame,last=0,time=0,guideKey=null,guideStep=0;
 const scenarioNotes={bursts:'Brief false commands in rest and short gaps during a correct movement.', 'slow-release':'The raw command continues after the movement annotation ends, with short rest flickers.', 'wrong-command':'The decoder initially chooses movement 2 while the annotation asks for grip (1).',chatter:'The decoder alternates between rest and grip near the start and stop.'};
 function stop(){playing=false;cancelAnimationFrame(frame);$('#play').textContent='Play replay';}
 function setTime(t){time=Math.min(4975,Math.max(0,Math.round(t/HOP)*HOP));$('#time').value=time;$('#time-value').textContent=time+' ms';const i=time/HOP,labels=['Rest','Grip','Other movement'];$('#command-state').innerHTML=`<span>Annotation <strong>${labels[scenario.truth[i]]}</strong></span><span>Raw decoder <strong>${labels[scenario.raw[i]]}</strong></span><span>Filtered command <strong>${labels[filtered[i]]}</strong></span>`;const poseKey=[scenario.truth[i],scenario.raw[i],filtered[i]].join(',');if($('#hand-scene').dataset.poseKey!==poseKey){$('#hand-scene').innerHTML=renderHandScene(scenario.truth[i],scenario.raw[i],filtered[i]);$('#hand-scene').dataset.poseKey=poseKey;}$('#hand-time').textContent=time+' ms';$('#hand-explanation').textContent=momentDescription(scenario.truth[i],scenario.raw[i],filtered[i]);const line=$('#playhead');if(line){const x=145+time/5000*825;line.setAttribute('x1',x);line.setAttribute('x2',x);}}
@@ -15,7 +16,7 @@ function timeline(){
 const pct=v=>v.toFixed(1)+'%',delay=v=>v===null?'Not reached':v+' ms';
 function metricTable(){
  const rows=[['Confirmed onset',delay(rawMetrics.onset),delay(filteredMetrics.onset),'≤250 ms'],['Confirmed release',delay(rawMetrics.release),delay(filteredMetrics.release),'≤150 ms'],['Unwanted activation in rest',pct(rawMetrics.exposure),pct(filteredMetrics.exposure),'Lower is better'],['Active-interior coverage',pct(rawMetrics.coverage),pct(filteredMetrics.coverage),'Counts all nonzero output'],['Correct active-interior output',pct(rawMetrics.correct),pct(filteredMetrics.correct),'Correct movement only'],['Wrong active-interior output',pct(rawMetrics.wrong),pct(filteredMetrics.wrong),'Nonzero, wrong movement']];
- $('#metrics').innerHTML='<h3>Whole-example comparison</h3><div class="table-scroll"><table><caption class="sr-only">Synthetic example metrics for raw and filtered commands</caption><thead><tr><th scope="col">Measure</th><th scope="col">Raw</th><th scope="col">Filtered</th><th scope="col">Meaning</th></tr></thead><tbody>'+rows.map(r=>`<tr><th scope="row">${r[0]}</th><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join('')+'</tbody></table></div>';
+ $('#metrics').innerHTML='<h3>Whole-example comparison</h3><div class="table-scroll"><table><caption class="sr-only">Synthetic example metrics for raw and filtered commands</caption><thead><tr><th scope="col">Measure</th><th scope="col">Raw</th><th scope="col">Filtered</th><th scope="col">Meaning</th></tr></thead><tbody>'+rows.map((r,i)=>`<tr data-metric="${['onset','release','exposure','coverage','correct','wrong'][i]}"><th scope="row">${r[0]}</th><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join('')+'</tbody></table></div>';
  let text=[];const delta=filteredMetrics.exposure-rawMetrics.exposure;
  if(delta>0.001)text.push(`The filter adds ${delta.toFixed(1)} percentage points of unwanted activation in this example.`);
  else if(delta<-.001)text.push(`The filter removes ${(-delta).toFixed(1)} percentage points of unwanted activation in this example.`);
@@ -31,12 +32,27 @@ function update(){stop();scenario=makeScenario($('#scenario').value);const famil
  for(const id of ['activation','release','n']){const v=+$('#'+id).value;$('#'+id+'-value').textContent=v+(v===1?' decision':' decisions');}
  $('#scenario-note').textContent=scenarioNotes[scenario.name];filtered=replay(scenario.raw,family,a,r,n);rawMetrics=metrics(scenario,scenario.raw);filteredMetrics=metrics(scenario,filtered);timeline();metricTable();setTime(time);
 }
-form.addEventListener('input',update);form.addEventListener('submit',e=>e.preventDefault());$('#time').addEventListener('input',e=>{stop();setTime(+e.target.value)});
-document.querySelectorAll('[data-hand-example]').forEach(button=>button.addEventListener('click',()=>{const p=HAND_EXAMPLES[button.dataset.handExample];for(const id of ['scenario','family','activation','release','n'])$('#'+id).value=p[id];time=p.time;update();}));
-$('#reset').addEventListener('click',()=>{form.reset();time=0;update()});$('#restart').addEventListener('click',()=>{stop();setTime(0)});
-$('#play').addEventListener('click',()=>{if(playing){stop();return;}if(time>=4975)setTime(0);playing=true;$('#play').textContent='Pause';last=0;let elapsed=time;
+form.addEventListener('input',()=>{closeGuide();update()});form.addEventListener('submit',e=>e.preventDefault());$('#time').addEventListener('input',e=>{closeGuide();stop();setTime(+e.target.value)});
+document.querySelectorAll('[data-hand-example]').forEach(button=>button.addEventListener('click',()=>{closeGuide();const p=HAND_EXAMPLES[button.dataset.handExample];for(const id of ['scenario','family','activation','release','n'])$('#'+id).value=p[id];time=p.time;update();}));
+$('#reset').addEventListener('click',()=>{closeGuide();form.reset();time=0;update()});$('#restart').addEventListener('click',()=>{closeGuide();stop();setTime(0)});
+$('#play').addEventListener('click',()=>{closeGuide();if(playing){stop();return;}if(time>=4975)setTime(0);playing=true;$('#play').textContent='Pause';last=0;let elapsed=time;
  const tick=now=>{if(!playing)return;if(last)elapsed+=Math.min(100,now-last);last=now;setTime(elapsed);if(elapsed>=4975){stop();return;}frame=requestAnimationFrame(tick)};frame=requestAnimationFrame(tick);
 });
+function closeGuide(){guideKey=null;$('#guide-panel').hidden=true;$('#metrics').dataset.focus='';document.querySelectorAll('[data-guide]').forEach(b=>b.setAttribute('aria-pressed','false'));}
+function openGuide(key,step=0){
+ const entering=guideKey!==key;const g=getGuide(key);guideKey=key;guideStep=Math.max(0,Math.min(g.steps.length-1,step));const current=g.steps[guideStep];
+ for(const id of ['scenario','family','activation','release','n'])$('#'+id).value=g.params[id];time=current.time;update();
+ $('#guide-panel').hidden=false;$('#guide-counter').textContent='Step '+(guideStep+1)+' of '+g.steps.length+' · Synthetic example';$('#guide-title').textContent=g.title;
+ $('#guide-settings').textContent='Separate start / stop persistence · Start '+g.params.activation+' · Stop '+g.params.release+' decisions';
+ $('#guide-step-title').textContent=current.title;$('#guide-step-body').textContent=current.body;$('#guide-lesson').hidden=guideStep!==g.steps.length-1;$('#guide-lesson').textContent='Takeaway: '+g.lesson;
+ $('#guide-prev').disabled=guideStep===0;$('#guide-next').disabled=guideStep===g.steps.length-1;$('#guide-timestamp').textContent=current.time.toLocaleString('en-US')+' ms';$('#metrics').dataset.focus=current.focus;
+ document.querySelectorAll('[data-guide]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.guide===key)));
+ for(let i=0;i<g.steps.length;i++){$('#guide-step-'+i).setAttribute('aria-current',i===guideStep?'step':'false');$('#guide-step-'+i).setAttribute('aria-label','Step '+(i+1)+': '+g.steps[i].title);}
+ if(entering)$('#guide-panel').scrollIntoView?.({block:'nearest'});
+}
+document.querySelectorAll('[data-guide]').forEach(button=>button.addEventListener('click',()=>openGuide(button.dataset.guide)));
+$('#guide-close').addEventListener('click',closeGuide);$('#guide-prev').addEventListener('click',()=>{if(guideKey)openGuide(guideKey,guideStep-1)});$('#guide-next').addEventListener('click',()=>{if(guideKey)openGuide(guideKey,guideStep+1)});
+for(let i=0;i<4;i++)$('#guide-step-'+i).addEventListener('click',()=>{if(guideKey)openGuide(guideKey,i)});
 let results;
 async function loadResults(){
  try{if(!results){const response=await fetch('emg/study-results.json');if(!response.ok)throw Error('Result file unavailable');results=await response.json();}renderResults();}catch(e){$('#study-summary').innerHTML='<p class="demo-notice">The result data could not be loaded. <a href="https://github.com/KSRICHARAN7/emg-command-filtering-benchmark/tree/main/results">Read the source results on GitHub ↗</a></p>';}
@@ -51,5 +67,5 @@ function renderResults(){const key=$('#comparison').value,d=results[key],ci=d.bo
  $('#study-chart').innerHTML=svg+`<details class="exact-values"><summary>Exact participant differences</summary><div class="table-scroll"><table><caption>Asymmetric − symmetric rest exposure, percentage points</caption><thead><tr><th scope="col">Dataset participant</th><th scope="col">Difference (pp)</th></tr></thead><tbody>${vals.map((v,i)=>`<tr><th scope="row">${start+i}</th><td>+${v.toFixed(6)}</td></tr>`).join('')}</tbody></table></div></details>`;
  $('#result-source').href='https://github.com/KSRICHARAN7/emg-command-filtering-benchmark/blob/main/results/'+(key==='db5'?'db5/paired_statistics.json':'db2/paired_contrasts.json');
 }
-for(const [id,isResults]of [['sandbox-button',false],['results-button',true]])$('#'+id).addEventListener('click',()=>{stop();$('#sandbox').hidden=isResults;$('#study-results').hidden=!isResults;$('#sandbox-button').setAttribute('aria-pressed',String(!isResults));$('#results-button').setAttribute('aria-pressed',String(isResults));if(isResults)loadResults();});
+for(const [id,isResults]of [['sandbox-button',false],['results-button',true]])$('#'+id).addEventListener('click',()=>{if(isResults)closeGuide();stop();$('#sandbox').hidden=isResults;$('#study-results').hidden=!isResults;$('#sandbox-button').setAttribute('aria-pressed',String(!isResults));$('#results-button').setAttribute('aria-pressed',String(isResults));if(isResults)loadResults();});
 $('#comparison').addEventListener('change',()=>{if(results)renderResults()});document.addEventListener('visibilitychange',()=>{if(document.hidden)stop()});update();

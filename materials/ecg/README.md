@@ -17,7 +17,7 @@ Does waveform quality improve selective classification under recorded ECG artifa
 The contribution is an audited benchmark and an explanation of how aggregate retention can conceal poor AF-case retention, rather than a validated clinical tool.
 
 ## Public materials
-The PDFs are the reviewed minimal-edit versions of the author's supplied rewrite. The manuscript retains its AI-assistance statement. This release contains manuscripts and project notes; it is not yet the public code/reproducibility release. Source waveforms, participant-level files, and private research archives are not included.
+The PDFs are the reviewed minimal-edit versions of the author's supplied rewrite. The manuscript retains its AI-assistance statement. The [public reproducibility repository](https://github.com/KSRICHARAN7/ecg-selective-classification) now contains original source code, fixed models, aggregate evidence, 64 scientific checks, and a tested fixed-model primary replay. See its [reproduction guide](https://github.com/KSRICHARAN7/ecg-selective-classification/blob/main/REPRODUCING.md) and [verification record](https://github.com/KSRICHARAN7/ecg-selective-classification/blob/main/docs/VERIFICATION.md). Source waveforms, participant-level files, and private research archives are not included.
 
 ## Limits
 Single-lead extraction from clinical 12-lead recordings is not wearable validation. Controlled artifact is not a prospective sensor-failure trial. No clinical deployment or journal publication is claimed.

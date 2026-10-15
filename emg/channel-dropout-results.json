@@ -1,0 +1,1210 @@
+{
+  "conditions": [
+    {
+      "condition": "intact",
+      "masked_channels_1_based": [],
+      "controller": "raw",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.07217327010483938,
+        "onset_success": 0.0625,
+        "offset_compliance": 0.3786764705882353,
+        "active_command_coverage": 0.9330211289225255,
+        "interior_correct_fraction": 0.5776473445561523,
+        "interior_wrong_active_fraction": 0.3553737843663733
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": 0.0,
+        "onset_success": 0.0,
+        "offset_compliance": 0.0,
+        "active_command_coverage": 0.0,
+        "interior_correct_fraction": 0.0,
+        "interior_wrong_active_fraction": 0.0
+      }
+    },
+    {
+      "condition": "intact",
+      "masked_channels_1_based": [],
+      "controller": "asymmetric",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.08294661199694164,
+        "onset_success": 0.06985294117647059,
+        "offset_compliance": 0.3382352941176471,
+        "active_command_coverage": 0.9438772665188195,
+        "interior_correct_fraction": 0.580975040443733,
+        "interior_wrong_active_fraction": 0.3629022260750865
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": 0.0,
+        "onset_success": 0.0,
+        "offset_compliance": 0.0,
+        "active_command_coverage": 0.0,
+        "interior_correct_fraction": 0.0,
+        "interior_wrong_active_fraction": 0.0
+      }
+    },
+    {
+      "condition": "missing_01",
+      "masked_channels_1_based": [
+        1
+      ],
+      "controller": "raw",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.07044198823266744,
+        "onset_success": 0.058823529411764705,
+        "offset_compliance": 0.3823529411764706,
+        "active_command_coverage": 0.9231156559628746,
+        "interior_correct_fraction": 0.525254395897189,
+        "interior_wrong_active_fraction": 0.39786126006568556
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": -0.17312818721719495,
+        "onset_success": -0.36764705882352927,
+        "offset_compliance": 0.36764705882352955,
+        "active_command_coverage": -0.9905472959650901,
+        "interior_correct_fraction": -5.2392948658963245,
+        "interior_wrong_active_fraction": 4.248747569931231
+      }
+    },
+    {
+      "condition": "missing_01",
+      "masked_channels_1_based": [
+        1
+      ],
+      "controller": "asymmetric",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.08201251178616627,
+        "onset_success": 0.0661764705882353,
+        "offset_compliance": 0.34191176470588236,
+        "active_command_coverage": 0.9355994731681407,
+        "interior_correct_fraction": 0.5288410683064502,
+        "interior_wrong_active_fraction": 0.4067584048616906
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": -0.09341002107753837,
+        "onset_success": -0.36764705882352927,
+        "offset_compliance": 0.3676470588235299,
+        "active_command_coverage": -0.827779335067881,
+        "interior_correct_fraction": -5.213397213728299,
+        "interior_wrong_active_fraction": 4.385617878660417
+      }
+    },
+    {
+      "condition": "missing_02",
+      "masked_channels_1_based": [
+        2
+      ],
+      "controller": "raw",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.15071683684773296,
+        "onset_success": 0.05514705882352941,
+        "offset_compliance": 0.3933823529411765,
+        "active_command_coverage": 0.9004277314527491,
+        "interior_correct_fraction": 0.47871381641651767,
+        "interior_wrong_active_fraction": 0.4217139150362314
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": 7.854356674289357,
+        "onset_success": -0.7352941176470585,
+        "offset_compliance": 1.470588235294118,
+        "active_command_coverage": -3.259339746977638,
+        "interior_correct_fraction": -9.893352813963457,
+        "interior_wrong_active_fraction": 6.634013066985812
+      }
+    },
+    {
+      "condition": "missing_02",
+      "masked_channels_1_based": [
+        2
+      ],
+      "controller": "asymmetric",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.16540022343088673,
+        "onset_success": 0.05514705882352941,
+        "offset_compliance": 0.35294117647058826,
+        "active_command_coverage": 0.9177368666584496,
+        "interior_correct_fraction": 0.4848478112307074,
+        "interior_wrong_active_fraction": 0.43288905542774214
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": 8.245361143394504,
+        "onset_success": -1.4705882352941173,
+        "offset_compliance": 1.4705882352941186,
+        "active_command_coverage": -2.6140399860370005,
+        "interior_correct_fraction": -9.612722921302574,
+        "interior_wrong_active_fraction": 6.9986829352655695
+      }
+    },
+    {
+      "condition": "missing_03",
+      "masked_channels_1_based": [
+        3
+      ],
+      "controller": "raw",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.06584470594559505,
+        "onset_success": 0.0625,
+        "offset_compliance": 0.400735294117647,
+        "active_command_coverage": 0.9284149507039898,
+        "interior_correct_fraction": 0.5224146359107389,
+        "interior_wrong_active_fraction": 0.4060003147932509
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": -0.632856415924433,
+        "onset_success": 2.220446049250313e-16,
+        "offset_compliance": 2.205882352941177,
+        "active_command_coverage": -0.460617821853572,
+        "interior_correct_fraction": -5.523270864541336,
+        "interior_wrong_active_fraction": 5.06265304268776
+      }
+    },
+    {
+      "condition": "missing_03",
+      "masked_channels_1_based": [
+        3
+      ],
+      "controller": "asymmetric",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.07559737718853256,
+        "onset_success": 0.0625,
+        "offset_compliance": 0.3639705882352941,
+        "active_command_coverage": 0.9395379422756058,
+        "interior_correct_fraction": 0.5254107463792319,
+        "interior_wrong_active_fraction": 0.4141271958963739
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": -0.7349234808409095,
+        "onset_success": -0.7352941176470584,
+        "offset_compliance": 2.5735294117647065,
+        "active_command_coverage": -0.4339324243213677,
+        "interior_correct_fraction": -5.5564294064501105,
+        "interior_wrong_active_fraction": 5.122496982128747
+      }
+    },
+    {
+      "condition": "missing_04",
+      "masked_channels_1_based": [
+        4
+      ],
+      "controller": "raw",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.07638528404235986,
+        "onset_success": 0.05514705882352941,
+        "offset_compliance": 0.39705882352941174,
+        "active_command_coverage": 0.9300879332319936,
+        "interior_correct_fraction": 0.5248005406261163,
+        "interior_wrong_active_fraction": 0.4052873926058772
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": 0.42120139375204746,
+        "onset_success": -0.7352941176470587,
+        "offset_compliance": 1.8382352941176459,
+        "active_command_coverage": -0.29331956905319645,
+        "interior_correct_fraction": -5.284680393003591,
+        "interior_wrong_active_fraction": 4.9913608239503935
+      }
+    },
+    {
+      "condition": "missing_04",
+      "masked_channels_1_based": [
+        4
+      ],
+      "controller": "asymmetric",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.08803068880098844,
+        "onset_success": 0.05514705882352941,
+        "offset_compliance": 0.34558823529411764,
+        "active_command_coverage": 0.9412878745504416,
+        "interior_correct_fraction": 0.5276809732874477,
+        "interior_wrong_active_fraction": 0.4136069012629939
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": 0.5084076804046781,
+        "onset_success": -1.470588235294117,
+        "offset_compliance": 0.7352941176470598,
+        "active_command_coverage": -0.2589391968377999,
+        "interior_correct_fraction": -5.329406715628542,
+        "interior_wrong_active_fraction": 5.070467518790741
+      }
+    },
+    {
+      "condition": "missing_05",
+      "masked_channels_1_based": [
+        5
+      ],
+      "controller": "raw",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.07238209553277478,
+        "onset_success": 0.05514705882352941,
+        "offset_compliance": 0.3492647058823529,
+        "active_command_coverage": 0.9293792579647895,
+        "interior_correct_fraction": 0.5165920783254154,
+        "interior_wrong_active_fraction": 0.412787179639374
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": 0.020882542793539613,
+        "onset_success": -0.7352941176470587,
+        "offset_compliance": -2.941176470588236,
+        "active_command_coverage": -0.3641870957736132,
+        "interior_correct_fraction": -6.105526623073687,
+        "interior_wrong_active_fraction": 5.741339527300072
+      }
+    },
+    {
+      "condition": "missing_05",
+      "masked_channels_1_based": [
+        5
+      ],
+      "controller": "asymmetric",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.08340202243226219,
+        "onset_success": 0.0661764705882353,
+        "offset_compliance": 0.3235294117647059,
+        "active_command_coverage": 0.9417557818598292,
+        "interior_correct_fraction": 0.5204851710963116,
+        "interior_wrong_active_fraction": 0.4212706107635177
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": 0.045541043532053266,
+        "onset_success": -0.36764705882352916,
+        "offset_compliance": -1.470588235294117,
+        "active_command_coverage": -0.21214846589903136,
+        "interior_correct_fraction": -6.048986934742153,
+        "interior_wrong_active_fraction": 5.83683846884312
+      }
+    },
+    {
+      "condition": "missing_06",
+      "masked_channels_1_based": [
+        6
+      ],
+      "controller": "raw",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.07105263726697919,
+        "onset_success": 0.0625,
+        "offset_compliance": 0.3860294117647059,
+        "active_command_coverage": 0.9285785507189032,
+        "interior_correct_fraction": 0.519479442497421,
+        "interior_wrong_active_fraction": 0.4090991082214822
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": -0.11206328378601951,
+        "onset_success": 0.0,
+        "offset_compliance": 0.735294117647059,
+        "active_command_coverage": -0.4442578203622441,
+        "interior_correct_fraction": -5.816790205873138,
+        "interior_wrong_active_fraction": 5.372532385510892
+      }
+    },
+    {
+      "condition": "missing_06",
+      "masked_channels_1_based": [
+        6
+      ],
+      "controller": "asymmetric",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.08154413453911308,
+        "onset_success": 0.0661764705882353,
+        "offset_compliance": 0.3529411764705882,
+        "active_command_coverage": 0.9401725377439853,
+        "interior_correct_fraction": 0.523108770560411,
+        "interior_wrong_active_fraction": 0.4170637671835744
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": -0.14024774578285787,
+        "onset_success": -0.36764705882352916,
+        "offset_compliance": 1.470588235294118,
+        "active_command_coverage": -0.37047287748341456,
+        "interior_correct_fraction": -5.7866269883322055,
+        "interior_wrong_active_fraction": 5.41615411084879
+      }
+    },
+    {
+      "condition": "missing_07",
+      "masked_channels_1_based": [
+        7
+      ],
+      "controller": "raw",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.07875095230371129,
+        "onset_success": 0.08088235294117646,
+        "offset_compliance": 0.375,
+        "active_command_coverage": 0.9288130196626881,
+        "interior_correct_fraction": 0.5308573198031199,
+        "interior_wrong_active_fraction": 0.39795569985956813
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": 0.6577682198871893,
+        "onset_success": 1.8382352941176472,
+        "offset_compliance": -0.36764705882352944,
+        "active_command_coverage": -0.4208109259837403,
+        "interior_correct_fraction": -4.67900247530323,
+        "interior_wrong_active_fraction": 4.258191549319486
+      }
+    },
+    {
+      "condition": "missing_07",
+      "masked_channels_1_based": [
+        7
+      ],
+      "controller": "asymmetric",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.0903985750083308,
+        "onset_success": 0.08455882352941177,
+        "offset_compliance": 0.3345588235294118,
+        "active_command_coverage": 0.9411188281290297,
+        "interior_correct_fraction": 0.534589481743747,
+        "interior_wrong_active_fraction": 0.4065293463852827
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": 0.7451963011389151,
+        "onset_success": 1.4705882352941182,
+        "offset_compliance": -0.3676470588235289,
+        "active_command_coverage": -0.27584383897899106,
+        "interior_correct_fraction": -4.638555869998615,
+        "interior_wrong_active_fraction": 4.3627120310196235
+      }
+    },
+    {
+      "condition": "missing_08",
+      "masked_channels_1_based": [
+        8
+      ],
+      "controller": "raw",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.06423540446777602,
+        "onset_success": 0.03676470588235294,
+        "offset_compliance": 0.4338235294117647,
+        "active_command_coverage": 0.9227235445166138,
+        "interior_correct_fraction": 0.5001905255744588,
+        "interior_wrong_active_fraction": 0.42253301894215506
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": -0.7937865637063359,
+        "onset_success": -2.573529411764706,
+        "offset_compliance": 5.51470588235294,
+        "active_command_coverage": -1.029758440591172,
+        "interior_correct_fraction": -7.745681898169348,
+        "interior_wrong_active_fraction": 6.715923457578176
+      }
+    },
+    {
+      "condition": "missing_08",
+      "masked_channels_1_based": [
+        8
+      ],
+      "controller": "asymmetric",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.07406829864689396,
+        "onset_success": 0.04044117647058824,
+        "offset_compliance": 0.3970588235294118,
+        "active_command_coverage": 0.9342849533699342,
+        "interior_correct_fraction": 0.5036395566899858,
+        "interior_wrong_active_fraction": 0.4306453966799484
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": -0.8878313350047684,
+        "onset_success": -2.941176470588235,
+        "offset_compliance": 5.882352941176469,
+        "active_command_coverage": -0.9592313148885325,
+        "interior_correct_fraction": -7.733548375374723,
+        "interior_wrong_active_fraction": 6.774317060486192
+      }
+    },
+    {
+      "condition": "missing_09",
+      "masked_channels_1_based": [
+        9
+      ],
+      "controller": "raw",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.08980128266970655,
+        "onset_success": 0.058823529411764705,
+        "offset_compliance": 0.35294117647058826,
+        "active_command_coverage": 0.9279165077575987,
+        "interior_correct_fraction": 0.49819782752711217,
+        "interior_wrong_active_fraction": 0.42971868023048654
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": 1.7628012564867164,
+        "onset_success": -0.36764705882352927,
+        "offset_compliance": -2.5735294117647056,
+        "active_command_coverage": -0.5104621164926868,
+        "interior_correct_fraction": -7.944951702904013,
+        "interior_wrong_active_fraction": 7.434489586411326
+      }
+    },
+    {
+      "condition": "missing_09",
+      "masked_channels_1_based": [
+        9
+      ],
+      "controller": "asymmetric",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.10376309176907858,
+        "onset_success": 0.058823529411764705,
+        "offset_compliance": 0.31985294117647056,
+        "active_command_coverage": 0.9405500264198079,
+        "interior_correct_fraction": 0.502095345538208,
+        "interior_wrong_active_fraction": 0.4384546808815999
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": 2.0816479772136933,
+        "onset_success": -1.1029411764705879,
+        "offset_compliance": -1.8382352941176467,
+        "active_command_coverage": -0.3327240099011655,
+        "interior_correct_fraction": -7.887969490552507,
+        "interior_wrong_active_fraction": 7.555245480651343
+      }
+    },
+    {
+      "condition": "missing_10",
+      "masked_channels_1_based": [
+        10
+      ],
+      "controller": "raw",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.07266409697625165,
+        "onset_success": 0.05514705882352941,
+        "offset_compliance": 0.40441176470588236,
+        "active_command_coverage": 0.9215304626786739,
+        "interior_correct_fraction": 0.47032969077341236,
+        "interior_wrong_active_fraction": 0.45120077190526164
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": 0.0490826871412251,
+        "onset_success": -0.7352941176470587,
+        "offset_compliance": 2.5735294117647065,
+        "active_command_coverage": -1.1490666243851615,
+        "interior_correct_fraction": -10.731765378273998,
+        "interior_wrong_active_fraction": 9.582698753888831
+      }
+    },
+    {
+      "condition": "missing_10",
+      "masked_channels_1_based": [
+        10
+      ],
+      "controller": "asymmetric",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.08403226667434283,
+        "onset_success": 0.058823529411764705,
+        "offset_compliance": 0.3566176470588235,
+        "active_command_coverage": 0.9333112733452811,
+        "interior_correct_fraction": 0.4734849800203898,
+        "interior_wrong_active_fraction": 0.4598262933248912
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": 0.10856546774011666,
+        "onset_success": -1.102941176470588,
+        "offset_compliance": 1.8382352941176472,
+        "active_command_coverage": -1.05659931735385,
+        "interior_correct_fraction": -10.74900604233433,
+        "interior_wrong_active_fraction": 9.69240672498048
+      }
+    },
+    {
+      "condition": "missing_11",
+      "masked_channels_1_based": [
+        11
+      ],
+      "controller": "raw",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.073028985661865,
+        "onset_success": 0.06985294117647059,
+        "offset_compliance": 0.3713235294117647,
+        "active_command_coverage": 0.9315798385318764,
+        "interior_correct_fraction": 0.5336742876978744,
+        "interior_wrong_active_fraction": 0.39790555083400214
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": 0.08557155570256147,
+        "onset_success": 0.7352941176470588,
+        "offset_compliance": -0.735294117647059,
+        "active_command_coverage": -0.14412903906490804,
+        "interior_correct_fraction": -4.397305685827794,
+        "interior_wrong_active_fraction": 4.253176646762885
+      }
+    },
+    {
+      "condition": "missing_11",
+      "masked_channels_1_based": [
+        11
+      ],
+      "controller": "asymmetric",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.0839394323726368,
+        "onset_success": 0.07352941176470587,
+        "offset_compliance": 0.33088235294117646,
+        "active_command_coverage": 0.9426397199656371,
+        "interior_correct_fraction": 0.5373974033545525,
+        "interior_wrong_active_fraction": 0.40524231661108456
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": 0.09928203756951509,
+        "onset_success": 0.36764705882352955,
+        "offset_compliance": -0.735294117647059,
+        "active_command_coverage": -0.12375465531824226,
+        "interior_correct_fraction": -4.357763708918056,
+        "interior_wrong_active_fraction": 4.23400905359981
+      }
+    },
+    {
+      "condition": "missing_12",
+      "masked_channels_1_based": [
+        12
+      ],
+      "controller": "raw",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.07552281368887798,
+        "onset_success": 0.06617647058823528,
+        "offset_compliance": 0.36764705882352944,
+        "active_command_coverage": 0.9282967375794586,
+        "interior_correct_fraction": 0.5208879243065798,
+        "interior_wrong_active_fraction": 0.4074088132728788
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": 0.33495435840385873,
+        "onset_success": 0.3676470588235296,
+        "offset_compliance": -1.1029411764705888,
+        "active_command_coverage": -0.4724391343066972,
+        "interior_correct_fraction": -5.675942024957251,
+        "interior_wrong_active_fraction": 5.203502890650552
+      }
+    },
+    {
+      "condition": "missing_12",
+      "masked_channels_1_based": [
+        12
+      ],
+      "controller": "asymmetric",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.08737106682182066,
+        "onset_success": 0.07352941176470587,
+        "offset_compliance": 0.3161764705882353,
+        "active_command_coverage": 0.9410491167701471,
+        "interior_correct_fraction": 0.5245699406116738,
+        "interior_wrong_active_fraction": 0.4164791761584732
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": 0.44244548248790116,
+        "onset_success": 0.3676470588235297,
+        "offset_compliance": -2.2058823529411753,
+        "active_command_coverage": -0.2828149748672515,
+        "interior_correct_fraction": -5.6405099832059244,
+        "interior_wrong_active_fraction": 5.357695008338672
+      }
+    },
+    {
+      "condition": "missing_13",
+      "masked_channels_1_based": [
+        13
+      ],
+      "controller": "raw",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.08550159082013017,
+        "onset_success": 0.058823529411764705,
+        "offset_compliance": 0.3492647058823529,
+        "active_command_coverage": 0.9308789729209022,
+        "interior_correct_fraction": 0.5232509030054355,
+        "interior_wrong_active_fraction": 0.40762806991546663
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": 1.3328320715290791,
+        "onset_success": -0.36764705882352944,
+        "offset_compliance": -2.9411764705882364,
+        "active_command_coverage": -0.21421560016233188,
+        "interior_correct_fraction": -5.439644155071676,
+        "interior_wrong_active_fraction": 5.225428554909339
+      }
+    },
+    {
+      "condition": "missing_13",
+      "masked_channels_1_based": [
+        13
+      ],
+      "controller": "asymmetric",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.09904348386715324,
+        "onset_success": 0.058823529411764705,
+        "offset_compliance": 0.3161764705882353,
+        "active_command_coverage": 0.9423264610363973,
+        "interior_correct_fraction": 0.5269452765591902,
+        "interior_wrong_active_fraction": 0.4153811844772072
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": 1.6096871870211589,
+        "onset_success": -1.102941176470588,
+        "offset_compliance": -2.2058823529411766,
+        "active_command_coverage": -0.15508054824222156,
+        "interior_correct_fraction": -5.40297638845429,
+        "interior_wrong_active_fraction": 5.247895840212069
+      }
+    },
+    {
+      "condition": "missing_14",
+      "masked_channels_1_based": [
+        14
+      ],
+      "controller": "raw",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.07046403412953006,
+        "onset_success": 0.051470588235294115,
+        "offset_compliance": 0.3897058823529411,
+        "active_command_coverage": 0.9293245674057018,
+        "interior_correct_fraction": 0.506859390497514,
+        "interior_wrong_active_fraction": 0.42246517690818775
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": -0.17092359753093286,
+        "onset_success": -1.102941176470588,
+        "offset_compliance": 1.1029411764705885,
+        "active_command_coverage": -0.36965615168237237,
+        "interior_correct_fraction": -7.07879540586382,
+        "interior_wrong_active_fraction": 6.709139254181447
+      }
+    },
+    {
+      "condition": "missing_14",
+      "masked_channels_1_based": [
+        14
+      ],
+      "controller": "asymmetric",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.08133205540357563,
+        "onset_success": 0.058823529411764705,
+        "offset_compliance": 0.3492647058823529,
+        "active_command_coverage": 0.9409270517698911,
+        "interior_correct_fraction": 0.5105784073908466,
+        "interior_wrong_active_fraction": 0.4303486443790445
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": -0.16145565933660225,
+        "onset_success": -1.1029411764705879,
+        "offset_compliance": 1.1029411764705885,
+        "active_command_coverage": -0.2950214748928426,
+        "interior_correct_fraction": -7.039663305288651,
+        "interior_wrong_active_fraction": 6.744641830395809
+      }
+    },
+    {
+      "condition": "missing_15",
+      "masked_channels_1_based": [
+        15
+      ],
+      "controller": "raw",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.07624972179082243,
+        "onset_success": 0.058823529411764705,
+        "offset_compliance": 0.3933823529411764,
+        "active_command_coverage": 0.9302658194669859,
+        "interior_correct_fraction": 0.5345029732927719,
+        "interior_wrong_active_fraction": 0.39576284617421403
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": 0.4076451685983029,
+        "onset_success": -0.3676470588235295,
+        "offset_compliance": 1.470588235294118,
+        "active_command_coverage": -0.2755309455539645,
+        "interior_correct_fraction": -4.314437126338042,
+        "interior_wrong_active_fraction": 4.038906180784075
+      }
+    },
+    {
+      "condition": "missing_15",
+      "masked_channels_1_based": [
+        15
+      ],
+      "controller": "asymmetric",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.08750925946490888,
+        "onset_success": 0.06617647058823528,
+        "offset_compliance": 0.3382352941176471,
+        "active_command_coverage": 0.9415309805579674,
+        "interior_correct_fraction": 0.5380158962834997,
+        "interior_wrong_active_fraction": 0.4035150842744676
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": 0.45626474679672313,
+        "onset_success": -0.3676470588235294,
+        "offset_compliance": 1.5543122344752192e-15,
+        "active_command_coverage": -0.2346285960852193,
+        "interior_correct_fraction": -4.2959144160233365,
+        "interior_wrong_active_fraction": 4.061285819938114
+      }
+    },
+    {
+      "condition": "missing_16",
+      "masked_channels_1_based": [
+        16
+      ],
+      "controller": "raw",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.0795174269340565,
+        "onset_success": 0.07352941176470587,
+        "offset_compliance": 0.3897058823529411,
+        "active_command_coverage": 0.9277514417595178,
+        "interior_correct_fraction": 0.5132137871866549,
+        "interior_wrong_active_fraction": 0.41453765457286296
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": 0.7344156829217116,
+        "onset_success": 1.1029411764705883,
+        "offset_compliance": 1.1029411764705883,
+        "active_command_coverage": -0.5269687163007755,
+        "interior_correct_fraction": -6.443355736949742,
+        "interior_wrong_active_fraction": 5.916387020648965
+      }
+    },
+    {
+      "condition": "missing_16",
+      "masked_channels_1_based": [
+        16
+      ],
+      "controller": "asymmetric",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.0920349780767778,
+        "onset_success": 0.08088235294117646,
+        "offset_compliance": 0.34558823529411764,
+        "active_command_coverage": 0.939550250972142,
+        "interior_correct_fraction": 0.5171249240691584,
+        "interior_wrong_active_fraction": 0.4224253269029835
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": 0.9088366079836138,
+        "onset_success": 1.1029411764705885,
+        "offset_compliance": 0.7352941176470598,
+        "active_command_coverage": -0.4327015546677637,
+        "interior_correct_fraction": -6.385011637457464,
+        "interior_wrong_active_fraction": 5.952310082789704
+      }
+    },
+    {
+      "condition": "missing_01_to_08",
+      "masked_channels_1_based": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "controller": "raw",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.03445331194603983,
+        "onset_success": 0.022058823529411766,
+        "offset_compliance": 0.6654411764705882,
+        "active_command_coverage": 0.8052191597115805,
+        "interior_correct_fraction": 0.255034026866221,
+        "interior_wrong_active_fraction": 0.5501851328453595
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": -3.771995815879956,
+        "onset_success": -4.044117647058823,
+        "offset_compliance": 28.67647058823529,
+        "active_command_coverage": -12.780196921094507,
+        "interior_correct_fraction": -32.26133176899313,
+        "interior_wrong_active_fraction": 19.48113484789862
+      }
+    },
+    {
+      "condition": "missing_01_to_08",
+      "masked_channels_1_based": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "controller": "asymmetric",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.04077893703736325,
+        "onset_success": 0.02573529411764706,
+        "offset_compliance": 0.6213235294117647,
+        "active_command_coverage": 0.8306366328494356,
+        "interior_correct_fraction": 0.261507826919378,
+        "interior_wrong_active_fraction": 0.5691288059300577
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": -4.216767495957839,
+        "onset_success": -4.411764705882352,
+        "offset_compliance": 28.30882352941176,
+        "active_command_coverage": -11.3240633669384,
+        "interior_correct_fraction": -31.946721352435514,
+        "interior_wrong_active_fraction": 20.622657985497113
+      }
+    },
+    {
+      "condition": "missing_09_to_16",
+      "masked_channels_1_based": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "controller": "raw",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.18754217999203227,
+        "onset_success": 0.05514705882352941,
+        "offset_compliance": 0.4522058823529412,
+        "active_command_coverage": 0.8712542968670921,
+        "interior_correct_fraction": 0.2751492226937512,
+        "interior_wrong_active_fraction": 0.5961050741733409
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": 11.536890988719293,
+        "onset_success": -0.7352941176470587,
+        "offset_compliance": 7.3529411764705905,
+        "active_command_coverage": -6.176683205543343,
+        "interior_correct_fraction": -30.249812186240106,
+        "interior_wrong_active_fraction": 24.073128980696765
+      }
+    },
+    {
+      "condition": "missing_09_to_16",
+      "masked_channels_1_based": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "controller": "asymmetric",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.19944929336621628,
+        "onset_success": 0.0625,
+        "offset_compliance": 0.3970588235294118,
+        "active_command_coverage": 0.8911767607516401,
+        "interior_correct_fraction": 0.2796771926134072,
+        "interior_wrong_active_fraction": 0.6114995681382329
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": 11.650268136927464,
+        "onset_success": -0.7352941176470584,
+        "offset_compliance": 5.882352941176473,
+        "active_command_coverage": -5.270050576717949,
+        "interior_correct_fraction": -30.12978478303259,
+        "interior_wrong_active_fraction": 24.85973420631464
+      }
+    },
+    {
+      "condition": "missing_all",
+      "masked_channels_1_based": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "controller": "raw",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.0,
+        "onset_success": 0.0,
+        "offset_compliance": 1.0,
+        "active_command_coverage": 0.0,
+        "interior_correct_fraction": 0.0,
+        "interior_wrong_active_fraction": 0.0
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": -7.217327010483938,
+        "onset_success": -6.25,
+        "offset_compliance": 62.13235294117648,
+        "active_command_coverage": -93.30211289225255,
+        "interior_correct_fraction": -57.764734455615226,
+        "interior_wrong_active_fraction": -35.537378436637326
+      }
+    },
+    {
+      "condition": "missing_all",
+      "masked_channels_1_based": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "controller": "asymmetric",
+      "participants": 8,
+      "joint_successes": 0,
+      "means": {
+        "rest_exposure": 0.0,
+        "onset_success": 0.0,
+        "offset_compliance": 1.0,
+        "active_command_coverage": 0.0,
+        "interior_correct_fraction": 0.0,
+        "interior_wrong_active_fraction": 0.0
+      },
+      "delta_from_intact_pp": {
+        "rest_exposure": -8.294661199694165,
+        "onset_success": -6.985294117647058,
+        "offset_compliance": 66.17647058823529,
+        "active_command_coverage": -94.38772665188196,
+        "interior_correct_fraction": -58.09750404437331,
+        "interior_wrong_active_fraction": -36.290222607508646
+      }
+    }
+  ],
+  "primary": {
+    "raw": {
+      "participants": 8,
+      "mean_loss_correct_pp": 6.394612334750652,
+      "bootstrap_95_percentile_interval_pp": [
+        5.384855561649843,
+        7.586432678260728
+      ],
+      "participant_losses_pp": [
+        7.1764620729589,
+        9.781589173254728,
+        7.166185292157295,
+        4.78492865028417,
+        4.845272302788128,
+        6.89757902659307,
+        4.969749618019614,
+        5.535132541949306
+      ],
+      "draws": 10000,
+      "seed": 5015,
+      "status": "EXPLORATORY_DESCRIPTIVE_ALREADY_EXPOSED_DB5"
+    },
+    "asymmetric": {
+      "participants": 8,
+      "mean_loss_correct_pp": 6.354905587361985,
+      "bootstrap_95_percentile_interval_pp": [
+        5.327918705056785,
+        7.566656939406239
+      ],
+      "participant_losses_pp": [
+        7.138627151655519,
+        9.843003260529725,
+        7.147300599866702,
+        4.741485055403361,
+        4.779329232703267,
+        6.793464626191669,
+        4.924774508354279,
+        5.471260264191363
+      ],
+      "draws": 10000,
+      "seed": 5015,
+      "status": "EXPLORATORY_DESCRIPTIVE_ALREADY_EXPOSED_DB5"
+    }
+  },
+  "validation": {
+    "status": "PASS",
+    "participant_condition_controller_evaluations": 320,
+    "matched_events_per_evaluation": 34,
+    "intact_summary_values_matching_release": 12,
+    "all_channel_posteriors_constant": true,
+    "all_scoring_denominators_preserved": true,
+    "historical_trace_checks": 8,
+    "plan_freeze_sha256": "946093a8f2196f789985d14ab9b195a4570e88b2e2f2da3d8cf3a174d40c3f43"
+  },
+  "provenance": {
+    "started_utc": "2026-10-15T22:31:46.611336+00:00",
+    "plan_freeze_sha256": "946093a8f2196f789985d14ab9b195a4570e88b2e2f2da3d8cf3a174d40c3f43",
+    "plan_git_commit": "2d08211d65c72dc4c98859004ae71197f66d17d7",
+    "original_outcomes_exposed": true,
+    "extension_analysis_previously_run": false,
+    "dataset": "DB5",
+    "participants": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "condition_count": 20,
+    "controller_count": 2,
+    "versions": {
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "scikit-learn": "1.8.0",
+      "threadpoolctl": "3.6.0"
+    },
+    "core_sha256": {
+      "src/controllers.py": "6660e853d0af5cadf3a64b2cf4efafecedf0be0b2b3d46b5af7f2440379af840",
+      "src/decoder.py": "f738134544e3ba8f55b7a9b75a9f2896b4fc396b67248daf2c0445cf24481669",
+      "src/emg_pipeline.py": "3b75bc61a3f82e691c958d152c04f2af51856d3cb348dd51baab76b3633cc672",
+      "src/evaluation.py": "3392c973bcd017e227220ef15c33416f889ff34486dec59e4d25f4bd3f47548f",
+      "src/final_analysis.py": "8a33ea8dacafbb28521462f2fa343b2ecfa79571f9987b9595ccaf940c100e0b",
+      "src/metrics.py": "098bdf9e9d0cbc923546664815cc46518bbf35ffd7f5bc43421a98380f5c609f",
+      "src/policies.py": "1ac1c6aa7dc86e6e84ec2aa016fb64f46a293274d55554b649099f1697cfbb87",
+      "src/replication.py": "556343cefc9d463b7d78bb75fffa21545a2193c69281aaf7f1e634df882027b8",
+      "src/robustness.py": "7772d027d98d2f6d4da6f89d0137ebd2ba76ebf0d1728a7a30bfa0291cf570ca"
+    },
+    "source_archive_sha256": {
+      "3": "1ccb876cb57c44f5a21698f9b8b6ef6fb2323c18ef033914d43412899f21ea04",
+      "4": "21396a0265f8333082f3f2513f032776fbdd397bcc95c0330e97d04d2356ba19",
+      "5": "061291a93c993681070579f17a83065c6e94332c8299eac73ca208e89e1153b5",
+      "6": "a789960a52565929c785630c39c69447fb20667c7467a94156751fe0646eb9ca",
+      "7": "c93ae271f57e039259e2d73944c6dbe079aa2fb9ef90f2f174c57fe45ada3226",
+      "8": "274d0bff593a3fac74898b6a16de2fc5637a3c337d19c55e253360ea10fd7b9d",
+      "9": "a473278a33451ec97b4efef1b68b37e3856e2cf1e18dafe11c316856610832af",
+      "10": "28903042ae3d4ca1dccf9b9c64710eff27670d772ccc5e4bdf7704e1fd4b3a06"
+    },
+    "historical_trace_comparisons": [
+      {
+        "subject": 3,
+        "endpoints_exact": true,
+        "raw_exact": true,
+        "asymmetric_exact": true
+      },
+      {
+        "subject": 4,
+        "endpoints_exact": true,
+        "raw_exact": true,
+        "asymmetric_exact": true
+      },
+      {
+        "subject": 5,
+        "endpoints_exact": true,
+        "raw_exact": true,
+        "asymmetric_exact": true
+      },
+      {
+        "subject": 6,
+        "endpoints_exact": true,
+        "raw_exact": true,
+        "asymmetric_exact": true
+      },
+      {
+        "subject": 7,
+        "endpoints_exact": true,
+        "raw_exact": true,
+        "asymmetric_exact": true
+      },
+      {
+        "subject": 8,
+        "endpoints_exact": true,
+        "raw_exact": true,
+        "asymmetric_exact": true
+      },
+      {
+        "subject": 9,
+        "endpoints_exact": true,
+        "raw_exact": true,
+        "asymmetric_exact": true
+      },
+      {
+        "subject": 10,
+        "endpoints_exact": true,
+        "raw_exact": true,
+        "asymmetric_exact": true
+      }
+    ],
+    "completed_utc": "2026-10-15T22:31:56.478884+00:00"
+  }
+}

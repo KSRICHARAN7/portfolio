@@ -1,2 +1,1 @@
-'use strict';
-document.querySelectorAll('.evidence-details').forEach(details=>details.addEventListener('toggle',()=>{details.querySelector('summary span').textContent=details.open?'−':'+';}));
+const legacy = {ecg:'ecg.html',emg:'emg.html',research:'oai.html',hourquest:'hourquest.html',experience:'activities.html',about:'about.html',work:'projects.html'}; if(location.pathname.endsWith('/')||location.pathname.endsWith('/index.html')){const target=legacy[location.hash.slice(1)];if(target)location.replace(target);}

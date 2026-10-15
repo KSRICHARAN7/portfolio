@@ -1,11 +1,39 @@
-# Sricharan Karthigeyan - Research & Service Portfolio
+# Sricharan Karthigeyan — personal portfolio
 
-A static portfolio collecting the user's existing research and service materials. No analytics, form submissions, credentials, private correspondence exports, participant-level OAI records, or personal medical records are included.
+Live: https://ksricharan7.github.io/portfolio/
 
-The OAI manuscript is an unchanged, author-shared PDF provided by the user. Curieux review status is summarized with a brief permitted excerpt from editorial correspondence; no acceptance is claimed. The public manuscript is not represented as a journal-published article.
+A buildless, multi-page GitHub Pages portfolio. The homepage introduces Sri and links to Projects, Activities, Awards and About. Individual project pages collect their manuscripts, interactive companions, code and evidence. Old homepage fragments redirect to the appropriate project or activity page.
 
-Activity scope is conservative: E2D device counts are event totals; Habitat output is not personalized; HLCA 2026 duties remain upcoming as of October 15, 2026; HourQuest fundraising is not described as a grant disbursement. Earlier simulated or estimated volunteer-hour totals are not published.
+## Pages
 
-Website implementation and research communication materials were prepared with ChatGPT/Codex assistance. This does not assign credit for historical research or projects.
+- `index.html`: short introduction and page directory
+- `projects.html`: selected projects
+- `emg.html`, `emg-lab.html`, `emg-manuscript.html`: EMG project, replay lab, unchanged manuscript draft
+- `oai.html`, `manuscript.html`: knee-pain research and unchanged author-shared manuscript
+- `ecg.html`: ECG reliability overview, manuscript, supplement and project notes
+- `hourquest.html`: HourQuest description, sourced platform totals and evidence links
+- `activities.html`, `awards.html`, `about.html`: activities, confirmed recognition and personal introduction
+- `connect.html`: GitHub and ORCID; LinkedIn awaits the author's exact profile URL
 
-The EMG project section collects the author-supplied unpublished manuscript draft, benchmark code, aggregate evidence and limitations. The manuscript PDF is unchanged from the supplied file.
+The homepage photo is a temporary Unsplash stock image, clearly labeled as not Sri. Replace `assets/temporary-portrait.jpg` and its alt text/caption when the author supplies a personal image. Original image URL: https://images.unsplash.com/photo-1500648767791-00dcc994a43e
+
+## Interactive EMG companion
+
+[Lab documentation](emg/README.md). Four causal controller families operate on deterministic, explicitly synthetic decoder-command streams. Actual published results are shown separately and do not change when sliders move. No raw participant recordings, fitted models or sample-level participant traces are distributed.
+
+## Checks
+
+```sh
+node tests/verify-lab.mjs
+python3 tests/verify-site.py
+# Optional, with the benchmark dependencies installed:
+python3 tests/verify-python-metrics.py /path/to/emg-command-filtering-benchmark
+```
+
+The 160 Python reference cases were generated from the EMG benchmark's `controllers.py` and `emg_pipeline.confirm_stable` at benchmark commit `ccc9e5df419ac8b6ecc9ab52988367f8579e4e7d`. See `tests/generate-python-reference.py`; it accepts the path to a local benchmark checkout. These cover majority tie handling, persistence and confirmation timing. Additional hand checks cover causality, wrong-command coverage, and exact held-output exposure.
+
+## Content scope
+
+EMG is an unpublished manuscript draft; OAI review status remains stated on its project page. No journal acceptance is claimed. E2D device totals are event-wide, not personal output. HLCA Ambassador duties remain upcoming as of October 15, 2026. Awards are limited to confirmed recognition; dates are omitted where not verified. Earlier simulated volunteer-hour totals are not published.
+
+Website implementation and interactive research communication tools were prepared with ChatGPT/Codex assistance. This does not assign credit for historical research, activities or achievements.

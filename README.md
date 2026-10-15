@@ -27,6 +27,7 @@ The homepage uses the author's supplied portrait at `assets/sricharan-portrait.j
 node tests/verify-lab.mjs
 node tests/verify-hand.mjs
 node tests/verify-guides.mjs
+node tests/verify-tour.mjs
 python3 tests/verify-site.py
 # Optional, with the benchmark dependencies installed:
 python3 tests/verify-python-metrics.py /path/to/emg-command-filtering-benchmark
@@ -39,3 +40,9 @@ The 160 Python reference cases were generated from the EMG benchmark's `controll
 EMG is an unpublished manuscript draft; OAI review status remains stated on its project page. No journal acceptance is claimed. E2D device totals are event-wide, not personal output. HLCA Ambassador duties remain upcoming as of October 15, 2026. Awards are limited to confirmed recognition; dates are omitted where not verified. Earlier simulated volunteer-hour totals are not published.
 
 Website implementation and interactive research communication tools were prepared with ChatGPT/Codex assistance. This does not assign credit for historical research, activities or achievements.
+
+## Communication materials
+
+`emg-tour.html` is a six-scene, approximately 126-second browser-narrated tour with captions, transcript, scene navigation, pause/resume and a silent timed fallback. Browser voices and speaking pace vary. No recording of the author is implied. The synthetic examples remain separate from the actual study findings.
+
+`materials/emg/EMG_Engineering_Poster.pdf` is a one-page, 18 x 24 inch research poster. Its comparison values come from `emg/study-results.json`. Rebuild with `python3 scripts/build-emg-poster.py` using ReportLab and the DejaVu Sans fonts.

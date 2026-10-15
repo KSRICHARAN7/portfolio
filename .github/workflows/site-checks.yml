@@ -16,4 +16,5 @@ jobs:
       - run: node tests/verify-lab.mjs
       - run: node tests/verify-hand.mjs
       - run: node tests/verify-guides.mjs
+      - run: node tests/verify-tour.mjs
       - run: python3 tests/verify-site.py

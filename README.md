@@ -7,3 +7,5 @@ The OAI manuscript is an unchanged, author-shared PDF provided by the user. Curi
 Activity scope is conservative: E2D device counts are event totals; Habitat output is not personalized; HLCA 2026 duties remain upcoming as of October 15, 2026; HourQuest fundraising is not described as a grant disbursement. Earlier simulated or estimated volunteer-hour totals are not published.
 
 Website implementation and research communication materials were prepared with ChatGPT/Codex assistance. This does not assign credit for historical research or projects.
+
+The EMG project section collects the author-supplied unpublished manuscript draft, benchmark code, aggregate evidence and limitations. The manuscript PDF is unchanged from the supplied file.

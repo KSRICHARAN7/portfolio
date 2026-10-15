@@ -4,7 +4,7 @@ const METHODS = {
   raw_confidence: {name:'Raw confidence',note:'Keeps the classifier’s most confident predictions. It is not a calibrated guarantee of correctness.'},
   confidence_adjusted: {name:'Confidence error ranker',note:'A fitted error ranker using confidence features and predicted class; this is the primary comparator.'},
   quality_only: {name:'Quality + predicted class',note:'The original “quality-only” ranker includes predicted class. It is different from the quality-without-class ablation.'},
-  quality_no_class: {name:'Quality without predicted class',note:'Exploratory ablation that removes predicted class from the quality ranker. These results need fresh external and multi-seed replication.'}
+  quality_no_class: {name:'Quality without predicted class',note:'Exploratory ablation without predicted class. The controls show the original benchmark; the followup below tests fresh seeds and new external records. The complete replication requirement was not met.'}
 };
 const COVERAGES=[.8,.9,.95];
 const CONDITIONS={em_24:'24 dB',em_12:'12 dB',em_6:'6 dB',em_0:'0 dB',clean:'Clean (no added artifact)'};

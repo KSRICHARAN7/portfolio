@@ -12,7 +12,7 @@ Does waveform quality improve selective classification under recorded ECG artifa
 - Participant-separated development roles and final test set; controlled recorded-artifact noise conditions.
 - Primary combined-versus-adjusted balanced retained-error difference: −0.2635 percentage points, paired participant-bootstrap 95% CI −2.7034 to +1.1410. Superiority was not established.
 - At 90% matched overall coverage, AF-positive-record retention for the combined filter was 9.27%, 11.26%, 21.19%, and 48.34% at 24, 12, 6, and 0 dB, respectively. All failed the 80% research retention criterion.
-- A favorable quality-only ablation is exploratory and has not received fresh external or multi-seed replication.
+- A [new followup](https://github.com/KSRICHARAN7/ecg-selective-classification/tree/main/extensions/quality-replication) tests the quality-without-predicted-class ablation across two fresh seeds and 930 new external records. Internal gains persisted; all five new comparisons met the AF-retention criterion, but one external interval crossed zero and the complete replication requirement was not met.
 
 The contribution is an audited benchmark and an explanation of how aggregate retention can conceal poor AF-case retention, rather than a validated clinical tool.
 

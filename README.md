@@ -19,12 +19,13 @@ The homepage uses the author's supplied portrait at `assets/sricharan-portrait.j
 
 ## Interactive EMG companion
 
-[Lab documentation](emg/README.md). Four causal controller families operate on deterministic, explicitly synthetic decoder-command streams. Actual published results are shown separately and do not change when sliders move. No raw participant recordings, fitted models or sample-level participant traces are distributed.
+[Lab documentation](emg/README.md). Four causal controller families operate on deterministic, explicitly synthetic decoder-command streams. Three schematic hands display annotation, raw-decoder and filtered-command states at the replay clock, with shortcuts to delayed-start, delayed-stop and wrong-movement examples. Actual published results are shown separately and do not change when sliders move. No raw participant recordings, fitted models or sample-level participant traces are distributed.
 
 ## Checks
 
 ```sh
 node tests/verify-lab.mjs
+node tests/verify-hand.mjs
 python3 tests/verify-site.py
 # Optional, with the benchmark dependencies installed:
 python3 tests/verify-python-metrics.py /path/to/emg-command-filtering-benchmark

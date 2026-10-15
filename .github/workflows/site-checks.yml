@@ -14,4 +14,5 @@ jobs:
         with:
           python-version: '3.12'
       - run: node tests/verify-lab.mjs
+      - run: node tests/verify-hand.mjs
       - run: python3 tests/verify-site.py

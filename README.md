@@ -13,9 +13,9 @@ A buildless, multi-page GitHub Pages portfolio. The homepage introduces Sri and 
 - `ecg.html`: ECG reliability overview, manuscript, supplement and project notes
 - `hourquest.html`: HourQuest description, sourced platform totals and evidence links
 - `activities.html`, `awards.html`, `about.html`: activities, confirmed recognition and personal introduction
-- `connect.html`: GitHub and ORCID; LinkedIn awaits the author's exact profile URL
+- `connect.html`: GitHub, LinkedIn and ORCID
 
-The homepage photo is a temporary Unsplash stock image, clearly labeled as not Sri. Replace `assets/temporary-portrait.jpg` and its alt text/caption when the author supplies a personal image. Original image URL: https://images.unsplash.com/photo-1500648767791-00dcc994a43e
+The homepage uses the author's supplied portrait at `assets/sricharan-portrait.jpg`, with a subtle smile added through the requested AI edit. LinkedIn points to the author-supplied profile URL.
 
 ## Interactive EMG companion
 

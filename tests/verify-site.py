@@ -5,18 +5,20 @@ import json
 ROOT=Path(__file__).resolve().parents[1]
 class Page(HTMLParser):
  def __init__(self,s):
-  super().__init__();self.ids=[];self.links=[];self.titles=0;self.h1=0;self.navlinks=[];self.innav=False;self.feed(s)
+  super().__init__();self.ids=[];self.links=[];self.titles=0;self.h1=0;self.navlinks=[];self.innav=False;self.inhead=False;self.feed(s)
  def handle_starttag(self,tag,attrs):
   a=dict(attrs)
   if tag=='nav':self.innav=True
   if tag=='h1':self.h1+=1
-  if tag=='title':self.titles+=1
+  if tag=='head':self.inhead=True
+  if tag=='title' and self.inhead:self.titles+=1
   if 'id' in a:self.ids.append(a['id'])
   for k in ['href','src','data']:
    if k in a:self.links.append(a[k])
   if self.innav and tag=='a':self.navlinks.append(a.get('href',''))
  def handle_endtag(self,tag):
   if tag=='nav':self.innav=False
+  if tag=='head':self.inhead=False
 pages={f:Page(f.read_text()) for f in ROOT.glob('*.html')}
 for file,page in pages.items():
  assert page.h1==1,(file,'expected one h1',page.h1)

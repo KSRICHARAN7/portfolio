@@ -1,0 +1,52 @@
+{
+  "source": "https://github.com/KSRICHARAN7/oai-knee-pain-reliability/blob/main/results/tables/risk_coverage.csv",
+  "scope": "Frozen aggregate study results; no participant-level records",
+  "freeze_date": "2026-09-13",
+  "rows": [
+    {
+      "abstain_percent": "0",
+      "coverage_percent": "100",
+      "retained_n": "8232",
+      "targeted_mae": "1.787213",
+      "random_abstention_mean_mae": "1.787213",
+      "random_abstention_ci_2_5": "1.787213",
+      "random_abstention_ci_97_5": "1.787213"
+    },
+    {
+      "abstain_percent": "5",
+      "coverage_percent": "95",
+      "retained_n": "7821",
+      "targeted_mae": "1.668512",
+      "random_abstention_mean_mae": "1.787199",
+      "random_abstention_ci_2_5": "1.777561",
+      "random_abstention_ci_97_5": "1.796271"
+    },
+    {
+      "abstain_percent": "10",
+      "coverage_percent": "90",
+      "retained_n": "7409",
+      "targeted_mae": "1.582299",
+      "random_abstention_mean_mae": "1.787600",
+      "random_abstention_ci_2_5": "1.774287",
+      "random_abstention_ci_97_5": "1.801121"
+    },
+    {
+      "abstain_percent": "15",
+      "coverage_percent": "85",
+      "retained_n": "6998",
+      "targeted_mae": "1.503552",
+      "random_abstention_mean_mae": "1.787335",
+      "random_abstention_ci_2_5": "1.769456",
+      "random_abstention_ci_97_5": "1.804327"
+    },
+    {
+      "abstain_percent": "20",
+      "coverage_percent": "80",
+      "retained_n": "6586",
+      "targeted_mae": "1.437338",
+      "random_abstention_mean_mae": "1.787072",
+      "random_abstention_ci_2_5": "1.767846",
+      "random_abstention_ci_97_5": "1.806382"
+    }
+  ]
+}

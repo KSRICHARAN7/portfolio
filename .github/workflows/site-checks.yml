@@ -18,4 +18,6 @@ jobs:
       - run: node tests/verify-guides.mjs
       - run: node tests/verify-tour.mjs
       - run: node tests/verify-robustness.mjs
+      - run: node tests/verify-oai.mjs
+      - run: node tests/verify-ecg.mjs
       - run: python3 tests/verify-site.py
